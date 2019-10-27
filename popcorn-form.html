@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Club Popcorn Sales</title>
+		<script src="popcorn-form.js"> </script>
 	</head>
 
 <!-- the function to calculate subtotal is called subtotal() and for the grand total it's grandtotal()
@@ -12,13 +13,13 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 		<form action="mailto:hreed@my.uri.edu" method="post" enctype="text/plain" name="EmailPopcornForm" id="popcorn-form">
 			<fieldset>
 				<legend>Club Popcorn Sales</legend>
-				<label>Buyer's Name: 
+				<label>Buyer's Name:
 					<input type="text" name="name" id="buyers-name" placeholder="Name Required" required></label>
 				<br>
-				<label>Street Address: 
+				<label>Street Address:
 					<input type="text" name="streetAddress" id="street-address" required></label>
 				<br>
-				<label>City, State, Zip: 
+				<label>City, State, Zip:
 					<input type="text" name="stateAddress" id="city-state-zip" required></label>
 				<br><br>
 <!-- this table has all the popcorn types and a button at the bottom to calculate subtotal and grand total -->
@@ -38,21 +39,21 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 					<tr>
 						<th>Caramel Popcorn (2 lb. canister)</th>
 						<th>$3.50</th>
-						<th> 
+						<th>
 							<input type="number" class="quantity" id="caramel">
 						</th>
 					</tr>
 					<tr>
 						<th>Caramel Nut Popcorn (2 lb. canister)</th>
 						<th>$4.50</th>
-						<th> 
+						<th>
 							<input type="number" class="quantity" id="caramel-nut">
 						</th>
 					</tr>
 					<tr>
 						<th>Toffey Nut Popcorn (2 lb. canister)</th>
 						<th>$5.00</th>
-						<th> 
+						<th>
 							<input type="number" class="quantity" id="toffey">
 						</th>
 					</tr>
@@ -61,7 +62,7 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 						<th>
 							<input type="text" name="subtotal">
 						</th>
-						<th> 
+						<th>
 							<button onclick="subtotal()" onclick="grandtotal()">Update Subtotal</button>
 						</th>
 					</tr>
@@ -78,7 +79,7 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 					<input type="radio" name="payment-type" value="credit"> Discover
 					<input type="radio" name="payment-type" value="credit"> American Express
 					<input type="radio" name="payment-type" value="check"> Check
-				</div>	
+				</div>
 				<br><br>
 <!-- submit and clear form buttons -->
 				<input type="submit" name="submit" value="Submit Order">
