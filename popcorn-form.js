@@ -12,21 +12,30 @@ function subtotal() {
   var ToffeyCost = 5 * ToffeyQuantity;
 
   var PopcornCost = UnpoppedCost + CaramelCost + CaramelNutCost + ToffeyCost;
-  document.getElementById("sub-total").value= PopcornCost;
+  document.getElementById("sub-total").value = PopcornCost;
 }
 
 // function to calculate grand total 
-// and any credit card charges
 function grandtotal() {
-	var subtotal = document.getElementsByName("subtotal");
-	var grandtotal = subtotal + subtotal*.07
-	return grandtotal;	
+	var subtotal = document.getElementById("sub-total").value;
+	var grandtotal = subtotal + subtotal*.07;
+	document.getElementById("grand-total").value = grandtotal;
 }
 
-function submit() {
+// function to add credit charge if necessary
+function finished() {
+	var payMethod = document.getElementById("check").checked;
+	var grandtotal = document.getElementById("grand-total").value;
 
-}
+	if (payMethod === false) {
+		grandtotal = grandtotal + 2.5;
+		var confirmation = confirm("Credit cards incur an extra charge of $2.50.");
+		if (confirmation === false) {
+			grandtotal = grandtotal - 2.5;
+			document.getElementById("check").checked = true;
+			return false;
+			}
+		document.getElementById("grand-total").value = grandtotal;
+	}
 
-function alerts() {
-	alert("Button")
 }

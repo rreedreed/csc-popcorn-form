@@ -71,18 +71,18 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 <!-- grand total is here, along with options for credit card type -->
 				<div id="payment-method">
 					<label>Grand Total:
-						<input type="text" name="grandtotal">
+						<input type="text" name="grand-total" id="grand-total">
 					</label>
 					<br>
 					<input type="radio" name="payment-type" value="credit"> Visa
 					<input type="radio" name="payment-type" value="credit"> Mastercard
 					<input type="radio" name="payment-type" value="credit"> Discover
 					<input type="radio" name="payment-type" value="credit"> American Express
-					<input type="radio" name="payment-type" value="check"> Check
+					<input type="radio" name="payment-type" value="checks" id="check" checked> Check
 				</div>
 				<br><br>
 <!-- submit and clear form buttons -->
-				<input type="submit" name="submit" value="Submit Order" onclick="alerts()">
+				<input type="submit" name="submit" value="Submit Order" onclick="return finished()">
 				<input type="reset" name="reset" value="Clear Form">
 
 			</fieldset>
