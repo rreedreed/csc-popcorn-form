@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Club Popcorn Sales</title>
-		
+
 	</head>
 
 <!-- the function to calculate subtotal is called subtotal() and for the grand total it's grandtotal()
@@ -54,13 +54,13 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 						<th>Toffey Nut Popcorn (2 lb. canister)</th>
 						<th>$5.00</th>
 						<th>
-							<input type="number" class="quantity" id="toffey">
+							<input type="number"  class="quantity" id="toffey">
 						</th>
 					</tr>
 					<tr>
 						<th>Subtotal:</th>
 						<th>
-							<input type="text" name="sub-total" id="sub-total">
+							<input type="text" readonly name="sub-total" id="sub-total">
 						</th>
 						<th>
 							<input type="button" onclick="subtotal()" value="Update Subtotal">
@@ -71,7 +71,7 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 <!-- grand total is here, along with options for credit card type -->
 				<div id="payment-method">
 					<label>Grand Total:
-						<input type="text" name="grand-total" id="grand-total">
+						<input type="text" readonly name="grandtotal">
 					</label>
 					<br>
 					<input type="radio" name="payment-type" value="credit"> Visa
