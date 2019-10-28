@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Club Popcorn Sales</title>
-		<script src="popcorn-form.js"> </script>
+		
 	</head>
 
 <!-- the function to calculate subtotal is called subtotal() and for the grand total it's grandtotal()
@@ -60,10 +60,10 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 					<tr>
 						<th>Subtotal:</th>
 						<th>
-							<input type="text" name="subtotal">
+							<input type="text" name="sub-total" id="sub-total">
 						</th>
 						<th>
-							<button onclick="subtotal()" onclick="grandtotal()">Update Subtotal</button>
+							<input type="button" onclick="subtotal()" value="Update Subtotal">
 						</th>
 					</tr>
 				</table>
@@ -82,10 +82,11 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 				</div>
 				<br><br>
 <!-- submit and clear form buttons -->
-				<input type="submit" name="submit" value="Submit Order">
+				<input type="submit" name="submit" value="Submit Order" onclick="alerts()">
 				<input type="reset" name="reset" value="Clear Form">
 
 			</fieldset>
 		</form>
+		<script src="popcorn-form.js"> </script>
 	</body>
-</html>>
+</html>
