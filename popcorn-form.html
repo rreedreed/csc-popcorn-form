@@ -63,7 +63,7 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 							<input type="text" readonly name="sub-total" id="sub-total">
 						</th>
 						<th>
-							<input type="button" onclick="subtotal()" value="Update Subtotal">
+							<input type="button" onclick="subtotal()" onclick="grandtotal()" value="Update Subtotal">
 						</th>
 					</tr>
 				</table>
@@ -71,7 +71,7 @@ Both functions come out of the "Update Subtotal" button, but the grand total has
 <!-- grand total is here, along with options for credit card type -->
 				<div id="payment-method">
 					<label>Grand Total:
-						<input type="text" readonly name="grandtotal">
+						<input type="text" readonly name="grand-total" id="grand-total">
 					</label>
 					<br>
 					<input type="radio" name="payment-type" value="credit"> Visa
