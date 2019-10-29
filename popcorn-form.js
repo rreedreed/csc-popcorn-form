@@ -17,7 +17,7 @@ function subtotal() {
 	document.getElementById("sub-total").value = PopcornCost;
 }
 
-// function to calculate grand total 
+// function to calculate grand total with subtotal
 function grandtotal() {
 	var subtotal = document.getElementById("sub-total").value;
 	var grandtotal = subtotal + subtotal*.07;
