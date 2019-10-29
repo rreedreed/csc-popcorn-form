@@ -15,13 +15,11 @@ function subtotal() {
 		alert("You entered in an incorrect value");
 	}
 	document.getElementById("sub-total").value = PopcornCost;
-}
 
-// function to calculate grand total with subtotal
-function grandtotal() {
-	var subtotal = document.getElementById("sub-total").value;
-	var grandtotal = subtotal + subtotal*.07;
+// nested grandtotal() here so it works
+	var grandtotal = PopcornCost + PopcornCost*.07;
 	document.getElementById("grand-total").value = grandtotal;
+
 }
 
 // function to add credit charge if necessary
