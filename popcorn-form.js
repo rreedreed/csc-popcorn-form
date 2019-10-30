@@ -25,17 +25,17 @@ function subtotal() {
 // function to add credit charge if necessary
 function finished() {
 	var payMethod = document.getElementById("check").checked;
-	var grandtotal = document.getElementById("grand-total").value;
+	var grandtotal = parseFloat(document.getElementById("grand-total").value);
 
 	if (payMethod === false) {
-		grandtotal = grandtotal + 2.5;
+		grandtotal = grandtotal + 2.50;
 		var confirmation = confirm("Credit cards incur an extra charge of $2.50.");
 		if (confirmation === false) {
 			grandtotal = grandtotal - 2.5;
 			document.getElementById("check").checked = true;
 			return false;
 			}
-		document.getElementById("grand-total").value = grandtotal;
-	}
+		};
+	document.getElementById("grand-total").value = grandtotal;
 }
 
